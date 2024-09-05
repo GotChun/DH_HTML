@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="d1"></div>
+    <a href="javascript:void(0)" id="d2">TEST</a>
+    <hr>
+    <!-- <button onclick="ClickHandler().count()">Test</button> -->
+    <form action="test.jsp" onsubmit="return false">
+        <input type="text" onsubmit="returnser(false)">
+        <input type="text" onsubmit="userid">
+        <input type="password" name="pass">
+        <input type="submit-button" vlaue="버튼1">
+        <input type="submit-button" vlaue="버튼1">
+        <button>버튼2</button>
+        <a href="">버튼3</a>
+    </form>
+
+
+    <script>
+        // 클릭이벤트
+        const d1Tg = document.getElementById("d1")
+        let cnt = 0;
+        d1Tg.addEventListener('click', (e) => {
+            console.log("clicked..", e)
+            console.log("clicked..", e.target)
+            d1Tg.innerHTML = `<h3>CLICKED..${++cnt}</h3>`;
+        })
+
+        const d2Tg = document.getElementById("d2");
+        d2Tg.addEventListener('Click...', () => {
+            console.log("clicked a tag...")
+        })
+        // 클로저함수
+        function ClickHandler() {
+            let cnt = 0;
+            function count() {
+                cnt++;
+                console.log("clicked...", cnt)
+            }
+            return count
+        }
+
+        const count = ClickHandler();
+
+
+       // 폼버튼 클릭 이벤트
+       cont stns = douemnt.qeurySeleco.qeurySelectioAll(".Submit-button")
+        console.log(btns)
+        console.log
+        btns.forEach((e1) =>)
+
+
+        "test".trim()
+
+        if (isValid(document.hmtl)
+        )
+
+
+            function isValid(from) {
+                // con
+                if (form.password.value.trim() === "";) {
+                    alert("ValidationCheck Error...Userid를 입력하세요")
+                    return false
+                }
+            }
+
+        //    function isValid(form){
+        // console.log("isVaild",satisfies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            const d2Tg = document.write.querySelector('#d2')
+            d2Tg.addEventListener("Click",()=>{})
+
+
+    </script>
+    <button onclick="count()">Test</button>
+</body>
+
+</html>

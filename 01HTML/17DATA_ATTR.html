@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="item" data-id="1"></div>
+      <div>IMG</div>
+      <div data-pname="샴푸">상품</div>
+      <div data-price="20000">가격</div>
+      <div>-</div>
+    </div>
+    <script>
+      const Els = document.querySelectorAll("div"); // 배열 오브젝트,, key value ,,딕셔너리?
+
+      //01
+      Els.forEach((el) => {
+        console.log(el.dataset);
+      });
+      //02
+      const itemEl = document.querySelector(".item");
+      console.log(itemEl.getAttribute("data-id"));
+    </script>
+
+    <!-- 인덱스 item 지정 -->
+    <!--  -->
+  </body>
+</html>

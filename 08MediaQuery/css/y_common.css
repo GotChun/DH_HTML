@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+}
+.wrapper > header {
+    width:100%;
+  height: 60px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrapper>header>.leftmenu{
+    position: relative ;
+    margin:0;
+
+}
+.wrapper > header > .top-header {
+  border: 0.3px solid;
+  border-radius: 50px;
+  color:lightgrey;
+
+  width: 30%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* justify-content: center; */
+}
+
+.wrapper > header
+.wrapper > header > .top-header 
+
+.wrapper > header > .top-header > .search {
+  width: 10%;
+  padding-left: 15px;
+  color:black;
+}
+.wrapper > header > .top-header .textbox {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  border: none;
+  font-size: medium;
+}
+.wrapper > header > .top-header .textbox:focus {
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+.wrapper > header > .top-header > .searchbox {
+  width: 50px;
+  height: 100%;
+  margin-left: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  color:black;
+}
+.wrapper>nav>.leftmenu{
+    position: relative;
+    border: 1px;
+}
+.wrapper > main {
+}
+.wrapper > main > section {
+  height: 100vh;
+  display: flex;
+}
+.wrapper > main > section > aside {
+  width: 250px;
+  height: 100%;
+  border: 1px solid;
+  padding: 10px;
+}
+.wrapper > main > section > aside > .item {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.wrapper > main > section > aside > .item > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 0 10px;
+  height: 40px;
+}
+.wrapper > main > section > aside > .item > div > .icon {
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > main > section > aside > .item > div > .title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.wrapper > main > section > aside > .item > div > .login {
+  display: block;
+  width: 80px;
+  height: 35-x;
+  border-radius: 15px;
+  border: 1px solid lightblue;
+  color: grey;
+}
+.wrapper > main > section > article {
+  width: calc(100% - 250px);
+  height: 100%;
+  border: 1px solid;
+}

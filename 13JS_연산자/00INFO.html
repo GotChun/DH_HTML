@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+        산술 연산자 (Arithmetic Operators):
+
+        + (덧셈)
+        - (뺄셈)
+        * (곱셈)
+        / (나눗셈)
+        % (나머지)
+        ++ (증가)
+        -- (감소)
+    -->
+        
+    <script>
+        // % 연산
+//         console.log(10%3===0)
+//         console.log(11%3===0)
+//         console.log(12%3===0)
+//         console.log(13%3===0)
+//         console.log(14%3===0)
+//         console.log(15%3===0)
+
+// // ----------------------------------
+//         console.log('---------------------')
+
+//         console.log(10%2===0)
+//         console.log(11%2===0)
+//         console.log(12%2===0)
+//         console.log(13%2===0)
+//         console.log(14%2===0)
+//         console.log(15%2===0)
+        // console.log()
+        // setInterval(()=>{console.log(Math.floor(Math.random()*1000%44) )},500)
+        
+        console.log(12345%10)
+        console.log(12345%100)
+        console.log(12345%1000)
+
+        
+
+                
+        console.log(12345/ 10)
+        console.log(12345/ 100)
+        console.log(12345/ 1000)
+
+
+
+
+        // let a =10
+        // let b =20
+        // let c =++a      //전치연산자 : a 안의 값을 1 증가 한 뒤 다른 연산처리
+        // let d =b--      // 후치연산자 : 다른 연산처리 이후 1증가
+        // let e = 'a'     
+        
+        // let g = (a++) + (b++) + (c--) - (++d)
+
+        // console.log(a,b,c,d,e,g)
+
+
+
+        // console.log(Math.random())
+
+    </script>
+    <!--
+        공간 = 값(먼저처리 == 저장)
+        할당 연산자 (Assignment Operators):
+        = (할당)
+        += (더해서 할당)
+        -= (빼서 할당)
+        *= (곱해서 할당)
+        /= (나눠서 할당)
+        %= (나머지를 할당)
+    -->
+    <script>
+        // let num= 5;
+        // num = num+10
+        // num+=10
+
+    </script>
+
+    <!--
+    비교 연산자 (Comparison Operators):
+
+        == (동등 비교)
+        === (일치 비교)
+        != (부등 비교)
+        !== (불일치 비교)
+        > (크다)
+        < (작다)
+        >= (크거나 같다)
+        <= (작거나 같다)
+    -->
+
+    <script>
+        // == vs ===
+        
+        console.log('123' == 123); //왼쪽 123은 string 이지만 ==은 자료형을 상관하지 않고 안의 내용을 비교함
+        console.log('123' === 123); //value와 자료형을 함께 일치여부 확인
+    </script>
+
+
+    <!--
+    논리 연산자 (Logical Operators):
+
+    && (논리 AND)
+    || (논리 OR)
+    ! (논리 NOT)
+    비트 연산자 (Bitwise Operators):
+
+    & (비트 AND)
+    | (비트 OR)
+    ^ (비트 XOR)
+    ~ (비트 NOT)
+    << (왼쪽 시프트)
+    >> (오른쪽 시프트)
+    >>> (부호 없는 오른쪽 시프트)
+    -->
+    
+    <script>
+        console.log('--------------------------')
+        // 
+        console.log(true && true);
+        console.log(true && false);
+        console.log(false && true);
+        console.log(false && false);
+
+        console.log(! false);
+
+        console.log(true || false);
+        console.log(! (5>3))
+
+        let a =10; let b=20;
+        console.log(a++)
+        console.log(a)
+        console.log(++a)
+    </script>
+
+    <!--
+        삼항 조건 연산자 (Ternary Operator):
+
+        condition ? expression1 : expression2
+        타입 연산자 (typeof Operator):
+     -->
+    <script>
+        const num = prompt("숫자 입력 ㄱ");
+        (num>10) ? console.log("num은 1보다 큼"):console.log(num, "은 10보다 작습니다")
+    </script>
+
+
+
+
+    <!--
+        typeof (피연산자의 타입을 문자열로 반환)
+        인스턴스 검사 연산자 (instanceof Operator):
+    -->
+
+     
+    <!--
+        instanceof (객체의 인스턴스 여부를 확인)
+    -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border: 1px solid black;
+        padding: 20px;
+      }
+      span {
+        display: inline;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border: 1px solid black;
+        /* 인라인 형태는 문자열의 크기만큼 크기가 할당이 되도록 명시되어 있기 때문에 크기가 지정이 되지 않는다 */
+      }
+      a {
+        display: inline;
+      }
+      img {
+        display: inline-block;
+        width: 700px;
+        height: 70px;
+      }
+      /* 
+        Block Tag = 한 행 전체를 차지하는 태그
+        - width o , height o
+        - margin o , padding o
+        Line Tag = 한 행안에 포함되어지는 태그
+        - width x , height x
+        - margin: left,right , padding : o
+        InLine-Block Tag = 한 행안에 포함되어지는 태그
+        - width : o , height : o
+        - margin: o , padding : o  */
+    </style>
+  </head>
+  <body>
+    <div>HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+    <hr />
+    <span>HELLO WORLD</span>
+    <span>HELLO WORLD</span>
+    <a href="">hello world!</a>
+    <a href="">hello world!</a>
+    <hr />
+    <img src="/01HTML/image/image.png" alt="1" />
+    <img src="./image/image2.jpg" alt="2" />
+    <img src="./image/image2.jpg" alt="3" />
+  </body>
+</html>

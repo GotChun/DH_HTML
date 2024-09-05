@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      div {
+        text-align: center;
+        font-size: 13px;
+      }
+      .files {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    form : 사용자로부터 특정정보를 받아 서버로 전달하는데 사용되는 태그
+    action attribute : 전달받는 서버 API() (OR Endpoint)
+    method Attribute : 서버로 요청하는 방식
+        get : 사용자 요청 정보를 query string 으로 전달(default)
+        post : 요청 정보를 request body 에 담아 전달(optional)
+        put
+        patch
+        delete -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <form action="test.jsp" method="GET">
+      <div>
+        <label class="fw-bolder">아이디 :</label><br />
+        <input class="m-2" type="text" name="userid" required />
+      </div>
+      <div>
+        <label class="fw-bolder">패스워드 :</label><br />
+        <input class="m-2" type="password" name="password" required />
+      </div>
+      <div>
+        <label class="fw-bolder">패스워드 확인 :</label><br />
+        <input class="m-2" type="password" name="repassword" />
+      </div>
+      <div>
+        <label class="fw-bolder">E-mail확인 :</label><br />
+        <input class="m-2" type="email" name="email" readonly />
+      </div>
+      <div>
+        <label class="fw-bolder">나이 확인 :</label><br />
+        <input class="m-2" type="number" name="age" min="5" max="70" step="2" />
+      </div>
+      <div>
+        <label class="fw-bolder">전화번호 :</label><br />
+        <input
+          class="m-2"
+          type="number"
+          name="tel"
+          pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+        />
+      </div>
+      <div><label class="fw-bolder">집주소 :</label><br /></div>
+      <br />
+      <div>
+        <label class="fw-bolder">상세 주소 :</label><br />
+        <input class="m-2" type="text" name="addr2" />
+      </div>
+      <div>
+        <label class="fw-bolder">성별</label><br />
+        <input type="radio" name="gender" value="M" /> 남자
+        <input type="radio" name="gender" value="W" /> 여자
+      </div>
+      <div>
+        <label class="fw-bolder">취미</label><br />
+        <input type="checkbox" name="hobby" value="climbing" /> 등산
+        <input type="checkbox" name="hobby" value="swim" /> 수영
+        <input type="checkbox" name="hobby" value="soccer" /> 축구
+        <input type="checkbox" name="hobby" value="golf" /> 골프
+      </div>
+      <br />
+      <div>
+        <label></label>
+        <input class="" type="file" name="files" multiple />
+      </div>
+      <br />
+      <div>
+        <label for="" class="fw-bolder">DATE :</label><br />
+        <input class="m-2" type="datetime-local" name="date" /><br />
+      </div>
+      <div>
+        <label for="" class="fw-bolder">COLOR</label><br />
+        <input class="m-2" type="color" name="color" />
+      </div>
+      <div>
+        <label for="" class="fw-bolder">RANGE</label><br />
+        <input
+          class="m-2"
+          type="range"
+          name="range"
+          min="0"
+          max="100"
+          value="30"
+        />
+      </div>
+      <div>
+        <label for="" class="fw-bolder">URL :</label><br />
+        <input class="m-2" type="url" name="url" />
+      </div>
+      <div>
+        <select class="m-2" name="location">
+          <br />
+          <option value="대구">머구</option>
+          <option value="포항" selected>포항항</option>
+          <option value="울산">울산</option>
+        </select>
+      </div>
+      <div>
+        <label for="" class="fw-bolder">MEMO</label><br />
+        <textarea rows="10" cols="50"></textarea>
+      </div>
+
+      <!-- <input type="submit" value="회원가입" /> -->
+      <div>
+        <button class="btn btn-primary">회원가입</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+  }
+  .wrapper > header {
+    height: 60px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper > header > .top-header {
+    border: 1px solid;
+    border-radius: 50px;
+  
+    width: 30%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: none;
+    /* justify-content: center; */
+  }
+  .wrapper > header > .top-header > .search {
+    width: 20%;
+    padding-left: 15px;
+  }
+  .wrapper > header > .top-header .textbox {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    border: none;
+    font-size: medium;
+  }
+  .wrapper > header > .top-header .textbox:focus {
+    border: none;
+    text-decoration: none;
+    outline: none;
+  }
+  .wrapper > header > .top-header > .searchbox {
+    width: 50px;
+    height: 100%;
+    margin-left: 90%;
+    align-items: center;
+display: block;
+    justify-content: center;
+
+    position: absolute;
+  }
+  
+.wrapper>main{}
+.wrapper>main>section{
+    height:100vh;
+    display: flex;
+}
+.wrapper>main>section>aside{
+    width:80px;
+    height:100%;
+    border: 1px solid;
+    padding: 10px;
+    display: none;
+}
+.wrapper>main>section>aside>.item{
+    padding:0px;
+    border-bottom:0;
+    cursor: pointer;
+}
+
+.wrapper>main>section>aside>.item>div{
+    height:100%;
+    display: flex;
+    /* align-items: center; */
+    border:1px solid;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding:0 10px;
+    height:60px;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.wrapper>main>section>aside>.item>div>.icon{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper>main>section>aside>.item>div>.title{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:.6rem;
+}
+.wrapper>main>section>aside>.item>div>.login{
+    display: block;
+    width:80px;
+    height:35-x;
+    border-radius:15px;
+    border:1px solid lightblue;
+    color:grey;
+}
+.wrapper>main>section>article{
+    width: calc(100% - 250px);
+    height:100%;
+    border:1px solid;
+}
+
+.wrapper>main>section>aside>.item:nth-child(3),
+.wrapper>main>section>aside>.item:nth-child(4),
+.wrapper>main>section>aside>.item:nth-child(5),
+.wrapper>main>section>aside>.item:nth-child(6),
+.wrapper>main>section>aside>.item:nth-child(7)
+{
+display: none;
+}

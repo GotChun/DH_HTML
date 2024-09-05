@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        td{width :50px;height:50px;border : 1px solid gray;}
+        input{width:90%; height:100%;outline:none;border:0px;}
+    </style>
+    
+    <input id="rownum" placeholder="행의개수입력" style="width:200px;">
+    <input id="colnum" placeholder="열의개수입력" style="width:200px;">
+    <button onclick="makemap()">생성</button>
+
+    <hr>
+    <table id="tbl">
+    </table>
+    <script>
+        let curX = 0;
+        let curY = 0;
+        let tblrow = 0;
+        let tblcol = 0;
+
+        let func =
+        function makemap(){
+              
+
+            // 위의 정보 가져옴
+            const row=document.getElementById('rownum').value;
+            const col=document.getElementById('colnum').value;
+            const tbl=document.getElementById('tbl')
+            tblrow=row;
+            tblcol=col;
+
+            // 자식 노드 삭제
+            while(tbl.firstChild)   {
+                tbl.removeChild(tbl.firstChild);
+            }
+
+            // 표 만들기
+            let cnt=1;  //안에 넣을 숫자
+            for(i=1; i<=row; i++){  //행 반복문
+                let tr=document.createElement('tr') //tr생성
+
+                for(j=1;j<=col;j++){    
+                    let td=document.createElement('td')
+                    td.setAttribute("id",i +"|"+j)
+                    td.addEventListener('click',()=>{
+                        console.log('clicked',i+"|"+j);
+                        changeWhite(curX,curY)
+                        changeBlack(i,j)
+                        curX=i;     //현재 위치 변경
+                        curY;j;     //현재 위치 변경
+                    })
+
+                    td.innerText=cnt++;
+                    tr.appendChild(td)
+                }
+                tbl.appendChild(tr)
+            }
+        
+
+
+        // 기본위치
+        curX = Math.ceil(row/2);
+        curY = Math.ceil(col/2);
+        curPosition(curX,curY);
+
+        
+        function curPosition(xPos,yPos){
+            documennt.getElementById(xPos'+|+'yPos)style.backgroundColor="grey"
+        }
+    }
+              document.addEventListener('keydown',(e)=>{
+            console.log(e.keyCode)
+            if(e.keyCode===37){
+                // left 37
+                changeWhite(curX,curY)
+                (curY-1<=0) ? curY=0 : curY--;
+                changeBlack(curX,curY)
+            }
+            if(e.keyCode===38){
+                // up 38
+            }
+            if(e.keyCode===39){
+                //right 39
+                changeWhite(curX,curY)
+                curX++;
+                changeBlack(curX,curY)
+            }
+            if(e.keyCode===40){
+                //down 40
+            }
+
+        })
+        //     const row=document.querySelector('#rownum')
+        //     const col=document.querySelector('#colnum')
+        //     const tb=document.querySelector('#tbl')
+
+        // function makemap(row,col){
+
+
+        // }
+        
+
+
+
+        // tb.addEventListener("click",makemap()=>{
+        
+        //         for(i=1;i<=row;i++){
+        //             document.write("<tr>")
+        //                 for(a=1;a<=col;a++){
+        //                     document.write("<td></td>")
+        //                 }
+        //        .00         document.write("</tr>")
+        //         }
+        // })
+
+
+
+
+        // function makemap(){
+        //    tb.append((e)=>{
+        //     for(i=1;i<=row;i++){
+        //         document.write("<tr>")
+        //             for(a=1;a<=col;a++){
+        //                 document.write("<td></td>")
+        //             }
+        //             document.write("</tr>")
+        //     }
+        //    })
+        //         }
+            
+
+        
+
+   
+            
+        
+    </script>
+    
+</body>
+</html>

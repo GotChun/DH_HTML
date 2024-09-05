@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"name": "01HTML",
+			"path": "01HTML"
+		},
+		{
+			"name": "02CSS",
+			"path": "02CSS"
+		},
+		{
+			"name": "03CSS_BOX",
+			"path": "03CSS_BOX"
+		},
+		{
+			"name": "04CSS_Selector",
+			"path": "04CSS_Selector"
+		},
+		{
+			"name": "05CSS_POSITION",
+			"path": "05CSS_POSITION"
+		},
+		{
+			"name": "06CSS_Layout",
+			"path": "06CSS_Layout"
+		},
+		{
+			"name": "07CSS_animation",
+			"path": "07CSS_animation"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "07CSS_animation"
+	}
+}

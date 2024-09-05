@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/apt.js"></script>
+</head>
+<body>
+    <script>
+        // 전체 정보
+        console.log(아파트)
+
+        const data = 아파트.data;
+        console.log(data)
+
+        // 1000 이하 , 1000 - 2000 , 2000 , -3000 , 3000 , -4000
+
+        const map1 = data
+            .filter((item)=>{
+                return item['분양가격(제곱미터)']>=2000 && item['분양가격(제곱미터)'] <=3000;
+            })
+            .map((item)=>{
+
+            return {분양가격 : '2000 ~ 3000' ,data :item}
+        })
+        console.log(map1)
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li name="li">item1</li>
+        <li id="li2">item2</li>
+        <li name="a">item3</li>
+        <li class="item">item4</li>
+        <li name='a'>item5</li>
+        <li class="item">item6</li>
+        <li>item7</li>
+        <li class="item">item8</li>
+    </ul>
+
+    <script>
+
+// undefined 가 뜬다면 요소를 안불러와서 그럼 !
+        //  getElementById
+        const li2El = document.getElementById('li2')   //들어오는 값은 다 id로 인식해서 #안붙임 
+        console.log(typeof li2El)
+        li2El.style.backgroundColor='orange';
+    
+        // s라고 붙어있으면 거의다 배열
+        //
+        const liEls= document.getElementsByTagName('li')
+        console.log(liEls)
+        Array.from(liEls).forEach((item) => {   //유사배열임 그래서 만들려면 Array.from() 메서드 사용 , 얕은 배열복사
+            item.style.fontSize='2rem'
+        });
+
+        // 
+        const li2El_2 = document.querySelector('#li2')
+        li2El_2.style.width='300px'
+
+        //
+        const itemEls = document.querySelectorAll('.item')
+        console.log(itemEls)
+        itemEls.forEach((item)=>{
+            console.log(item)
+        })
+
+        const aEls=document.getElementsByName('a')
+        console.log(aEls)
+        aEls.forEach((item)=>{
+            console.log(item)
+        })
+
+
+        </script>
+</body>
+</html>

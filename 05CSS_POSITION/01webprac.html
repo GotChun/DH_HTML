@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+      .layout.basic {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .wrapper {
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .wrapper > header > nav {
+     border: 1px solid silver;
+     padding:30px;
+     
+      }
+      .wrapper > header > nav > .mainmenu {
+        /* border: 1px solid black;  */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        line-height: 3em;
+        /* opacity: 1; */
+        max-height: 0;
+        transition: opacity 1s ease ;
+        
+      }
+      .wrapper > header > nav > .mainmenu > li {
+        width: 100%;
+        border:1px solid black;
+        text-align: center;
+        position: relative;
+      }
+      .wrapper > header > nav > .mainmenu > li > .submenu {
+        display: none;
+        line-height: 1.5rem;
+        /* opacity: 0;
+        max-height: 0;
+        transition: max-height 1s ease,opacity 1s ease; */
+        /* display: block; */
+      }
+      .wrapper > header > nav > .mainmenu > li:hover .submenu{
+        display: block;
+        /* max-height: 300px;
+        opacity: 1; */
+  }
+  .warpper>header>nav>.mainmenu>li>.submenu>li>a{
+    display: block;
+    
+  }
+  /* .wrapper>header>nav>.mainmenu{
+    opacity: 0;
+    transition: opacity 1s ease ;
+  } */
+  .wrapper>header>nav>.mainmenu:hover .submenu{
+    opacity: 1;
+    display: block;
+  }
+
+  
+
+    
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="top-header">
+          <!-- 제목 -->
+        </div>
+        <nav class="">
+          <!-- 메뉴 -->
+          <ul class="mainmenu">
+            <li>
+              <a href="">프로필</a>
+              <ul class="submenu">
+                <li><a href="">경기기록</a></li>
+                <li><a href="">스쿼드</a></li>
+                <li><a href="">이적시장</a></li>
+                <li><a href="">친구</a></li>
+                <li><a href="">방명록</a></li>
+                <li><a href="">설정</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">게임소식</a>
+              <ul class="submenu">
+                <li><a href="">공지사항</a></li>
+                <li><a href="">개발자노트</a></li>
+                <li><a href="">업데이트</a></li>
+                <li><a href="">이벤트</a></li>
+                <li><a href="">유저 가이드</a></li>
+                <li><a href="">전술 가이드</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">커뮤니티</a>
+              <ul class="submenu">
+                <li><a href="">추천</a></li>
+                <li><a href="">자유</a></li>
+                <li><a href="">팁</a></li>
+                <li><a href="">질문</a></li>
+                <li><a href="">클럽 홍보</a></li>
+                <li><a href="">친구 초대</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">데이터센터</a>
+
+              <ul class="submenu">
+                <li><a href="">데일리 차트</a></li>
+                <li><a href="">선수</a></li>
+                <li><a href="">팀</a></li>
+                <li><a href="">공식경기</a></li>
+                <li><a href="">볼타 랭킹</a></li>
+                <li><a href="">스쿼드 메이커</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- 내용 -->
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

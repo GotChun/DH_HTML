@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{}
+        .box{
+            width:1000px;
+            height:500px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap:50px;
+            overflow:auto;
+            /* border:1px solid; */
+        }
+
+        .box>*{
+            width:100%;height:100%;
+            border:1px solid;
+            position: relative;
+            padding-top:10px;
+            
+        }
+        
+
+        .box>*:nth-child(1)::after{
+         
+        }
+        /* .box>*:nth-child(2)::after */
+    </style>
+</head>
+<body>
+    
+
+    <div class="box">
+        <div class="main-thread"></div>
+        <div class="sub-thread"></div>
+        <div class="sub2-thread"></div>
+
+    </div>
+
+/* MAIN 스레드 동작 */
+    <script>
+
+        // const main1 = document.querySelector('.main-thread');
+        // const subn1 = document.querySelector('.sub1-thread');
+        // const nsub1 = document.querySelector('.sub2-thread');
+        // setInterval(()=>{
+        //     main.innerHTML+='MAIN THREAD REN...!!<br>'
+        // })
+
+        // // SUB 스레드 동작(async/await 를 사용하기 전  - 동시에 예약된는 문제 
+        // function sub_process_exe(val){
+        //     return new Promise((resolve,reject))=>{};
+        //     setTimeout(()=>{
+        //         resolve(val)    //비동기요청 성공시에 전달되는 값
+                
+        //     },3000)
+        // }
+        // // SUB1 스레드 동작
+        // sub_process_exe(1)
+        // .then((response){
+        //     consolse.log('response',response)
+        //     sub1.innerHTML=`${response}-THREAD RUN`
+        // })
+        // .catch(()=>{})
+
+        async function sub_process_func(){
+
+            await sub
+        }
+
+        </script>
+<!-- SUB 스레드 동작(async/await 를 사용하기 전  - 동시에 예약된는 문제 -->
+
+</body>
+</html>                                                           

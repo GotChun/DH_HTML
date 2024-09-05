@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .par{
+            height:150px;
+            border:1px solid;
+            display: flex;
+            /* 수평 배치 형태 */
+            justify-content:center;
+            /* justify-content:space-evenly,around,between; */
+            /* 수직 배치 형태 center,flex-end,flex-start,stretch,baseline */
+            align-items: center;
+            /* flex 방향 row,row-reverse */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap */
+            flex-wrap:wrap;
+        }
+        .son{
+            border:1px solid;
+            width:150px;
+            height:40px;
+        }
+        .son-:nth-child(1){
+            /* align-self: stretch; */
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;
+        }
+        .son-:nth-child(2){
+            align-self: flex-end;
+            flex-grow: 2;
+        }
+        .son-:nth-child(3){
+            align-self: flex-start;
+            flex-grow: 1;
+        }
+        .son-:nth-child(4){}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="par">
+            <div class="son">1</div>
+            <div class="son">2</div>
+            <div class="son">3</div>
+            <div class="son">4</div>
+            <div class="son">5</div>
+            <div class="son">6</div>
+            <div class="son">7</div>
+            <div class="son">8</div>
+            <div class="son">9</div>
+            <div class="son">10</div>
+        </div>
+    </div>
+</body>
+</html>

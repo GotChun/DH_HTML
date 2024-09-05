@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- 클로저
+     내부 함수가 외부 함수의 변수에 접근할 수 있는 것을 의미 -->
+
+    <script>
+        // 01 기본
+        function outer() {
+            // 상태값
+            let state = 0;
+
+            function addStateOne() {
+                state++;
+                
+                console.log("sur state Val", state)
+
+            }
+
+            return addStateOne; //함수이름이 리턴되면 만들ㅇ진 함수의 위치정보(주소)가 반환
+        }
+
+        const closureFunc = outer();
+        console.log(closureFunc)
+        closureFunc();
+        closureFunc();
+        closureFunc();
+
+
+        const func = ()=>{
+            // 상태값
+            let num=0;
+
+            // num의 값을 증가
+            const setNum = (n)=>{
+                console.log("setNum Call..")
+                num= num+n;
+            }// 외부에서 받아와서 누적시키는 작업
+            // num의 값을 확인
+            const getNum = ()=>{
+                console.log("getNum call..")
+                return num;
+            }   //반환해주는 작업
+
+            return {set : setNum , get : getNum}
+        }
+
+
+const closure = func()
+        closure.set(10)
+        closure.set(20)
+        closure.set(30)
+        console.log(closure.get())
+
+    </script>

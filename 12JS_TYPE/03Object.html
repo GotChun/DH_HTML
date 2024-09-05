@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <button onclick="myCar.accel()">가속함수!</button>
+    <button onclick="myCar.break()">멈춤함수</button>
+    <script>
+        // Object : {Key : Value} // 딕셔너리? (파이썬)
+
+
+        // const poppi = {
+        //     // 속성(필드)
+        //     name: "뽀삐",
+        //     kind: "포메라니안",
+        //     age: 1
+        // }
+
+        //     // 기능(함수) 화살표함수
+
+        //     sound = ()=>{   
+        //         alert(poppi.name  + "이 멍멍 소리를 냅니다")
+        //     },
+        //     toString: ()=>{
+        //         alert(
+        //             "이름 :" + poppi.name + "\n나이 :" + poppi.age+"\n견종" + poppi.kind
+        //         )
+        //     }
+        // }
+
+        // console.log('이름 : ' ,poppi.name);
+        // console.log('견종 : ' ,poppi.kind);
+        // console.log('나이 : ' ,poppi.age);
+
+
+
+        const myCar = {
+
+            owner: "박대해",
+            cat: "포르쉐",
+            fuelkind: "휘발유",
+            speed: 250,
+
+            accel  : () => {
+       
+                    // myCar.owner + "속도를 증가합니다";
+                    alert(
+                    myCar.speed = myCar.speed+10 , "반갑습니다 !~"
+            )
+            },
+            break :() => {
+                alert(
+                    
+                    myCar.speed = myCar.speed-10
+                );
+            },
+            toString: () => {
+                alert(
+                    "소유자 :" + myCar.owner + "\n차종 :" + myCar.cat + "\n유종 :" + myCar.fuelkind + "\n속도" + myCar.speed);
+
+            }
+        }
+
+        // console.log("소유자", myCar.owner);
+        // console.log("차종", myCar.cat);
+        // console.log("유종", myCar.fuelkind);
+        // console.log("속도", myCar.speed);
+
+        // // myCar.accel();
+        // // myCar.break();
+        // // myCar.accel();
+        // myCar.accel();
+        // myCar.accel();
+        // console.log("속도", myCar.speed);
+        // myCar.break();
+        // myCar.break();
+        // console.log("속도 :" , myCar.spe0ed);
+        console.log(typeof myCar);
+        console.log(typeof myCar.accel);
+
+        const a  = 1+2;
+        console.log(a)
+
+      c= function(){
+            1+2
+        }
+        console.log(c)
+
+        let q = 1;
+
+        q = 3;
+
+        q = 1;
+
+
+
+        console.log(q);
+
+        const f = 13;
+
+        console.log(f);
+
+        f = 12;
+
+        const g = {
+            const asd
+
+        }
+    </script>
+</body>
+
+</html>

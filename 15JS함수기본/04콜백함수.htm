@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // 콜백함수 (call back)
+        // 함수를 호출하는 시점이 바뀌어진 형태의 함수
+        // 기존방식 : 사용자 (개발자) 가 함수를 직접정의 => 정의된 함수를 호출(call)하여 결과를 반환받는 방식
+        // callback : 콜백함수에 인자로 로직이 담긴 함수를(함수주소)를 전달하여 콜백함수로부터 처리된 결과를
+        // 반환받는 방식
+
+
+        // 일반함수
+        function func(n1,n2){
+            console.log("func(n1,n2) Call!")
+            return n1+n2;
+        }
+
+        // Call
+        // const v1=func(10,20)
+        // console.log("v1",v1)
+
+        // 콜백함수
+        function callBackF(n1,n2,logic){
+            console.log("callBackF..start")
+            const v1= logic(n1,n2)
+            console.log("v",v1)
+            console.log("callBackF..end")
+        }
+        callBackF(100,200,func)
+        callBackF(100,200,(n1,n2)=>{return n1*n2})
+
+
+        function callBackF2(logic){
+            console.log("callBackF2..start")
+            const v=logic(n1,n2)
+            console.log("v",v)
+            console.log("callBackF2..end")
+        }
+
+        // map 생성
+        callBackF2(arr,(...args)=>{})
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

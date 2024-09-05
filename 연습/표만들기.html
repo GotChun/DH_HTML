@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        td{width :50px;height:50px;border : 1px solid gray;}
+        input{width:90%; height:100%;outline:none;border:0px;}
+    </style>
+    
+    <input id="rownum" placeholder="행의개수입력" style="width:200px;">
+    <input id="colnum" placeholder="열의개수입력" style="width:200px;">
+    <button onclick="makemap()">생성</button>
+
+    <hr>
+    <table id="tbl">
+    </table>
+    <script>
+        
+        function makemap(){
+
+        const row= document.getElementById('rownum')        //getElementById
+        const col= document.getElementById('colnum')    //id 들을 불러옴
+        const tb=document.getElementById('tbl') 
+
+        let cnt =1; //표안에 들어갈 숫자
+        for(i=1;i<=row;i++){
+            let tr = document.createElement('tr')  //( ) 안에 태그를 생성해서 반환한다 //tr 태그를 일단 시작반환
+
+            for(let j=1;j<=col;j++){
+                let td = document.createElement('td')    //() td 태그 반환 생성
+            
+                td.innerText=cnt++;
+                tr.appendChild(td)
+            }
+            tb.appendChild(tr)
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .d1{
+            width:300px;
+            height:200px;
+            background-color: orange;
+            border: 3px solid;
+        }
+        .d1::before{
+            content:'Shit__';
+            width:50px;
+            height:50px;
+            background-color: red;
+            display: block;
+            text-align: center;
+        }
+        .d1::after{
+            display: block;
+            content:'__Fuck you';
+            width:30px;
+            height: 30px;
+            font-size: 1.5%;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 가상선택자
+    ::before   :   content영역 앞부분에 표시할 스타일
+    ::after    :   content영역 뒷부분에 표시할 스타일
+     -->
+    <div class="d1">HELLO WORLD</div>
+  </body>
+</html>

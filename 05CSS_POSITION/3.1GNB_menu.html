@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+      }
+      * {
+        box-sizing: border-box;
+        /* border: 1px solid; */
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .layout-basic {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .wrapper {
+        width:100%;
+      }
+      .wrapper > header {
+      }
+      .wrapper > header > .top-header {
+      }
+      .wrapper > header >nav {
+        /* width:100%; */
+        border:1px solid;
+      }
+
+      .wrapper>header>nav>.mainmenu{
+        display: flex;
+        justify-content: space-between;
+        /* position: relative; */
+      }
+      .wrapper>header>nav>.mainmenu>li{
+        width:100%;
+        text-align: center;
+        height:40px;
+        line-height: 40px;
+        border:2px solid;
+
+        position: relative;
+      }
+      .wrapper>header>nav>.mainmenu>li>a{
+        display:block;
+      }
+      .wrapper>header>nav>.mainmenu>li>.submenu{
+        display: none;
+        position: absolute;
+        width:100%;
+        left:0;
+        top:40px;
+      }
+      .wrapper>header>nav>.mainmenu>li>.submenu>li{
+        border:1px solid;
+        /* background-color: skyblue; */
+        
+       
+      }
+      .wrapper>header>nav>.mainmenu>li>.submenu>li>a{
+        
+        display: block;       
+      }
+      .wrapper>header>nav>.mainmenu>li:hover .submenu{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="top-header"></div>
+        <nav>
+            <ul class="mainmenu">
+                <li>
+                    <a href="">Menu1</a>
+                    <ul class="submenu">
+                        <li><a href="">SubMenu1</a></li>
+                        <li><a href="">SubMenu2</a></li>
+                        <li><a href="">SubMenu3</a></li>
+                        <li><a href="">SubMenu4</a></li>
+                        <li><a href="">SubMenu5</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Menu2</a>
+                    <ul class="submenu">
+                        <li><a href="">SubMenu1</a></li>
+                        <li><a href="">SubMenu2</a></li>
+                        <li><a href="">SubMenu3</a></li>
+                        <li><a href="">SubMenu4</a></li>
+                        <li style="background-color: aqua;"><a href="">SubMenu5</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Menu3</a>
+                    <ul class="submenu">
+                        <li><a href="">SubMenu1</a></li>
+                        <li><a href="">SubMenu2</a></li>
+                        <li><a href="">SubMenu3</a></li>
+                        <li><a href="">SubMenu4</a></li>
+                        <li><a href="">SubMenu5</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Menu4</a>
+                    <ul class="submenu">
+                        <li><a href="">SubMenu1</a></li>
+                        <li><a href="">SubMenu2</a></li>
+                        <li><a href="">SubMenu3</a></li>
+                        <li><a href="">SubMenu4</a></li>
+                        <li><a href="">SubMenu5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <footer></footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

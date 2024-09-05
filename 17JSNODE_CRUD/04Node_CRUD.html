@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .todo {
+            width: 500px;
+            height: 50px;
+            border: 1px solid;
+            margin: 5px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="add" placeholder="할일 입력">
+    <a href="javascript:void(0)" class="addBtn">입력</a>
+    <hr>
+    <div class="container"></div>
+
+
+    <script>
+        // input 엔터키에 대한 이벤트
+        const addEl = document.querySelector('.add');
+        addEl.addEventListener('keydown', (e) => {
+            const keyCode = e.keyCode;
+            const text = addEl.value;
+            if (keyCode === 13) {
+                console.log(keyCode, text)
+                addNode(text);
+                addEl.value = console.log('ccc');
+            }
+
+
+        })
+        // 입력버튼 클릭했을 때 대한 이벤트
+        const addBtnEl = document.querySelector('.addBtn')
+        addBtnEl.addEventListener('click', () => {
+            const text = addEl.value        //여긴 왜 매개변수를 안쓰나?
+            console.log("clicked...", text)
+            addNode(text);
+            addEl.value = '';
+        })
+        // -------------------------------------------------------------------
+
+        // 
+        let oldEl = null
+        let oldYpos = null
+        function addNode(text) {
+            const containerEl = document.querySelector('.container')
+
+            const newDiv = document.createElement('div')
+            newDiv.classList.add('todo')
+            newDiv.setAttribute('draggable', true)   //드래그 가능 객체 지정
+            newDiv.addEventListener('dragstart', (e) => {
+                // console.log('dragstart..',e.target.innerHTML)
+                oldEl = event.target;  //드래그 시작했을 때 요소
+                oldYpos = e.pageY;  //현재 페이지의 y축 값
+            })
+
+            newDiv.addEventListener('dragover', (e) => {
+                // console.log('dragover..',e.target)      //드래그 할 때 알림
+                e.preventDefault();         //
+            })
+
+            newDiv.addEventListener('drop', (e) => {
+                // console.log('drop..',e.target);         //놓을 때 알림
+                console.log('old :', oldEl, oldYpos)
+                console.log('target :', e.target, e.pageY)
+
+                parentNode.insertBefore(oldEl, e.target).add
+                // oldEl.before(e.target)      //target : 이벤트가 발생한 요소
+                const parentNode = oldEl.parentNode;
+
+                //oldEl.before(e.target);
+                const ChildNodes = Array.from(parentNode.childNodes);
+
+                ChildNodes.forEach((el) => {
+                    console.log(el);
+                });
+                const oldIdx = ChildNodes.indexOf(oldEl);
+                const targetIdx = ChildNodes.indexOf(e.target);
+
+                ChildNodes[oldIdx] = e.target;
+                ChildNodes[targetIdx] = oldEl;
+
+
+            })
+
+
+
+            const span1 = document.createElement('span')
+            span1.innerHTML = text
+            newDiv.appendChild(span1)
+
+            const span2 = document.createElement('span')    //div 안에 span 생성
+            span2.innerHTML = ' | 삭제'       //| 삭제 텍스트 넣음
+            span2.setAttribute('style', 'cursor:pointer')    //포인터 바뀌기
+            span2.addEventListener('click', () => {    //클릭 이벤트 함수
+                const delTodo = span2.parentNode; //부모노드(parentNode) = delTodo
+                delTodo.remove();   //누르면 삭제
+
+            })
+            newDiv.appendChild(span2)
+
+
+            // containerEl.appendChild(newDiv);
+            containerEl.prepend(newDiv);   //마지막에 넣기? //div닫는거라 제일 마지막에 만드는듯?
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

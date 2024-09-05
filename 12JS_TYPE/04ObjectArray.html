@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // arr = [1,2,3,'대해',123123.12414,'ㅂㅇ']
+
+        // console.log(arr);
+        // console.log(arr[4]);
+        // arr[3] = 'ee대해'
+        // console.log(arr[3]);
+        
+        // const arr2 = ['ㄴㅁㄴㅇ','박대래랭랜래',123123,'01010',213.1233]
+        // const arr3 = ['ㄴㅁㄴㅇ','박대래랭랜래',{name:"홍길동",age:55},false,undefined,{name: '해해',age:1.1}]
+        
+
+        // arr3[3] = "박대해"
+        // console.log(arr3[3])
+        // console.log(typeof arr3[0])
+        // console.log(typeof arr3[1])
+        // console.log(typeof arr3[2])
+        // console.log(typeof arr3[3])
+        // console.log(typeof arr3[4])
+        // console.log(typeof arr3[5])
+        // console.log(arr3.length);
+
+        // let arr = [1,2,3]
+        // console.log(arr);
+        // console.log('길이',arr.length);
+
+        // arr[6]=123.23;
+        // console.log(arr)
+        // console.log(typeof arr[6])
+
+
+        // ----------------------
+        // 배열관련 기능 Push/Pop
+        // ------------------------
+        // Push = 마지막에 추가 , Pop = 마지막에 제거
+        // let arr = [5,6,7,78]
+        // let a = [1,2,3,4,5]
+        // console.log(arr)
+        // arr.push(100)
+        // arr.push(200)
+        // arr.push('a')
+        // arr.push(a)
+        // console.log(arr)
+        // arr.pop()
+        // // console.log(arr)
+        // console.log(arr[7])
+        // console.log(arr.length)
+
+        // 배열 안 내용 순회반복
+        // let arr=[1,2,3,4,5]
+        // // Old
+        // for(i=0;i<arr.length;i++){
+        //     console.log(arr[i])
+        // }
+        
+        // for(i in arr){
+        //     console.log(arr[i]);
+        // }
+        // // 
+
+        // arr.forEach((item)=>{console.log(item)});
+
+        // 
+        //  배열관련 함수 Sort()
+        // 
+        // let arr = [124,56,646,31,376,1234,"234","23"]
+        // console.log(arr)
+
+        // arr.sort();
+        // console.log(arr)
+
+        // arr.sort((a,b)=>{return b-a;})
+        // console.log(arr)
+
+        // 
+        //  배열관련 함수 #Filter
+        // 
+        // // // 배열.filter((배열요소)=>{조건식})
+        // arr = [123,45,6754,6,4,6,6,46,65,true,null];
+
+
+        // // let onlyNum=arr.filter((item=>typeof item==="number"}))
+
+        // filter 함수도 배열 새로만듬
+        // let sortedNum = arr.filter((item)=>{return typeof item === "number"}).sort((a,b)=>{return b-a})
+        // console.log(sortedNum)
+
+        // let sumVal = sortedNum.reduce((sum,item)=>{return sum=sum+item},0)
+        // console.log("sumVal",sumVal)
+
+        // 
+        // 배열 Object ForEach - [{},{},{}].forEach()
+        // 
+    //     let arr = [
+    //         {name:'세탁기',price:500000},
+    //         {serialNo:'1111-2222',category:'모니터',productName:'삼성모니터'},
+    //         {name:'홍길동',age:55,addr:'대구'},
+    // ]
+    //     arr.forEach((item)=>{
+    //         if(typeof item==='object'){
+    //             console.log(item)
+    //             for(key in  item){
+    //                 console.log('key : ',key,"value :" ,item[key])
+    //             }
+    //         }
+
+    //     });
+
+
+    // -----------------------
+    //  map + 일반배열
+    // -----------------------
+
+    // let arr = [10,20,30,40]
+    // let returnedArr=arr.map((item)=>{return item+'%'})
+    // console.log(returnedArr)
+    // console.log(arr)
+    // console.log(returnedArr)
+
+
+
+    // -----------------------
+    //  map + 배열 object
+    // -----------------------
+    // let orderList=[
+    //     {oid:111,name:'홍길동',addr:'대구',tel:'010-2444-5667',product:'모니터',pid:'111-2222'},
+    //     {oid:111,name:'남길동',addr:'머구',tel:'010-5345-5667',product:'ssd',pid:'321423-24'},
+    //     {oid:111,name:'서길동',addr:'서울',tel:'010-1233-5667',product:'hdd',pid:'423-324'},
+    //     {oid:111,name:'박길동',addr:'대전',tel:'010-9865-5667',product:'ram',pid:'234-234'}
+    // ]
+    // console.log(orderList)
+
+    // let returnMap = orderList.map((item)=>{
+    //     return {oid:item.oid,tel:item.tel}
+    // })
+    // console.log(returnMap)
+
+    
+    // 유사배열객체 - {}.forEach()   (x)
+    // 
+
+    let arr = ['a','b','c']
+    let obj = {
+        0:'a',
+        1:'b',
+        2:'c',
+        length:3
+    }
+
+    console.log('arr',arr)
+    console.log('obj',obj)
+    console.log(arr[2])
+    console.log(obj[3])
+    console.log(arr.length)
+    console.log(obj.length)
+    arr.forEach(()=>{})
+    // obj.forEach(()=>{})
+
+    Array.from(obj).forEach((item)=>{console.log(item)})
+
+    console.log(Array.from(obj));
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

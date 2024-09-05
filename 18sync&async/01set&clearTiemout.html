@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="javascript:void(0)" class="btn1">예약실행</a>
+    <a href="javascript:void(0)" class="btn2">예약취소</a>
+
+    <div class="d1"></div>
+
+
+    <!-- 동기 : 미리 약속된 규칙을 근거로 동작하는 방식
+        비동기 : 약속된 규칙대로 동작하지 않고 특정한 방식으로 동작
+        전체로 요청하냐 , 부분적으로 요청하냐 차이 ?
+        자바스크립트는 싱글 스레드 방식 : 스레드 : 내려가는 흐름 -->
+    <script>
+        const d1=document.querySelector('.d1')
+        const btn1 = document.querySelector('.btn1')
+        let reservedId=null;
+        btn1.addEventListener('click', () => {
+
+            console.log('clicked...!');
+
+            reservedId=setTimeout(() => {
+                d1.innerHTML += "HELLOWORLD1"
+            }, 3000)
+            console.log("reserdID",reservedId)
+            d1.innerHTML+="HELLOWORLD2"
+            
+        })
+
+        const btn2 = document.querySelector('.btn2')
+        btn2.addEventListener('click',()=>{
+            if(reservedId!=null){
+                clearTimeout(reservedId)
+            }
+        })
+
+        //setTimeout : 비동기 함수의 대표적인 함수 (예약함수 : 일정시간 이후 특정작업 수행 - 비동기처리함수)
+
+    </script>
+
+
+</body>
+
+</html>
