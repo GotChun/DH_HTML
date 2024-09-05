@@ -94,26 +94,25 @@
         btnEl.addEventListener('click', function () {
             console.log('clicked...!')
             const form = document.joinForm;
-            if (!isValid(form)) {     //느낌표 뭔데..
-                // 유효성체크오류 ,,false 라면 작업 종료
-                return ;
-            }
-            const username = form.username.value;
+            if (!isValid(form)) {     //반환값을 반대로 만듬 form이 true라면 반전해서 fasle 를 반환 false 라면 작업을 종료시키고 싶을 때 사용
+                return ;    //작업을 종료한다는 뜻임        isValid가 true라면 여기서 false니까 밑에 함수 코드들을 계속 실행해서 테이블을 만듬
+            }                                               //근데 false 라면 true 가 되어서 return; = 종료한다는 뜻으로 그냥 함수가 alert가 뜬 다음 함수가 바로 종료됨
+            const username = form.username.value;   // input 입력한 값을 찾아줌
             const age = form.age.value
             const address = form.address.value;
 
-            createNode(username, age, address)
+            createNode(username, age, address)      //createNode 라는 함수를 호출 ! 
 
-            form.username.value = ''
+            form.username.value = ''    //위의 함수가 끝나고 나면 input들의 value값을 '' = 즉 빈 값으로 초기화해줌
             form.age.value = ''
             form.address.value = ''
         })
 
         //유효성검사 함수(Validation Check )
         function isValid(form) {
-            // if(form.username.value.trim()===""){
-            //     alert('username을 입력하세요..')
-            //     return false;
+            // if(form.username.value.trim()===""){     // trim으로 공백같은 문자열 없애줌 
+            //     alert('username을 입력하세요..')      // username이 공백이라면 alert 가 뜬다
+            //     return false;                        // 그리고 false 반환
             // }
             // if(form.age.value.trim()===""){
             //     alert('age을 입력하세요..')
@@ -124,16 +123,16 @@
             //     return false;
             // }
 
-            return true;
+            return true;            //아니면 true 반환
         }
 
 
         //노드생성 함수
         isEdited = [];  //각 요소의 idx는 추가되는 tr의 순서번호
-        function createNode(username, age, address) {
-            const tblBodyEl = document.querySelector('table tbody')
-            const trEl = document.createElement('tr');
-            const td1El = document.createElement('td');
+        function createNode(username, age, address) {           
+            const tblBodyEl = document.querySelector('table tbody')     //table 태그 안 tbody태그 참조
+            const trEl = document.createElement('tr');      //tr 태그 생성
+            const td1El = document.createElement('td');       //td태그 생성  
             const td2El = document.createElement('td');
             const td3El = document.createElement('td');
             const td4El = document.createElement('td');
@@ -150,7 +149,7 @@
             in3.readOnly = true;
             in3.setAttribute('style', 'width:90%;')
 
-            const delBtn = document.createElement('span')
+            const delBtn = document.createElement('span')   
             delBtn.innerHTML = 'delete'
             delBtn.setAttribute('style', 'cursor:pointer;display:block;')
             delBtn.addEventListener('click', () => {
@@ -188,14 +187,14 @@
             td3El.appendChild(in3)
             td4El.appendChild(delBtn)
             td5El.appendChild(editBtn)
-
-            trEl.appendChild(td1El)
+//-------------------------------------------
+            trEl.appendChild(td1El)     //trE1 = tr 안에 tdlEl = td 요소를 추가
             trEl.appendChild(td2El)
-            trEl.appendChild(td3El)
+            trEl.appendChild(td3El)     //다 마찬가지
             trEl.appendChild(td4El)
             trEl.appendChild(td5El)     //수정 버튼
 
-            tblBodyEl.appendChild(trEl)
+            tblBodyEl.appendChild(trEl) //순서가 밑에있긴 한데 관계없고 tbody 안에 tr태그를 생성해줌
 
 
             // isEdit
