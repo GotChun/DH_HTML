@@ -31,6 +31,7 @@ input{
 
 /*  */
 .wrapper{
+    width:100vw;
 
 }
 .wrapper>header{
@@ -122,7 +123,6 @@ input{
     width:100%;
     height:100px;
     font-size: 3rem;
-    color:#294B52;
 
     display:flex;
     justify-content: center;
@@ -131,10 +131,14 @@ input{
     position: absolute;
     bottom:10%;
 }
+.wrapper>header>.bottom-header>nav>div>a{
+    color:#294B52;
+
+}
 .wrapper>header>.bottom-header>nav>div{
     padding:0px 100px;
 }
-.wrapper>header>nav{}
+
 
 /* main 페이지 */
 .wrapper>main{
