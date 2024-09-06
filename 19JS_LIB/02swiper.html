@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- swiper CDN -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .swiper{
+            width:300px;
+            height:50px;
+            border:1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header></header>
+        <main>
+            <section>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><a href="javascript:void(0)">Slide01</a></div>
+            <div class="swiper-slide"><a href="javascript:void(0)">Slide02</a></div>
+            <div class="swiper-slide"><a href="javascript:void(0)">Slide03</a></div>
+            <div class="swiper-slide"><a href="javascript:void(0)">Slide04</a></div>
+
+        </div>
+    </div>
+
+    </section>
+    </main>
+    <footer></footer>
+    </div>
+
+
+    <script>
+        const slide = new Swiper('.swiper',{
+            direction:'vertical',
+            // 자동동작
+            autoplay:{
+                delay:3000,
+                pauseOnMouseEnter : true,
+            },
+            loop:ture,
+        })
+    </script>
+</body>
+
+</html>
