@@ -31,14 +31,16 @@ input{
 
 /*  */
 .wrapper{
-    width:100vw;
-
 }
 .wrapper>header{
     height:430px;
     background-color: #CBCBAD;
-    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 /* top-header  */
 .wrapper>header>.top-header{
@@ -79,10 +81,7 @@ input{
 /* mid-header 검색 창 부분 */
 .wrapper>header>.mid-header{
     height:64px;
-    width:35vw;
-    left:50%;
-    transform: translateX(-50%);
-    margin-top:50px;
+    width:45vw;
 
     display: flex;
     justify-content: center;
@@ -94,50 +93,45 @@ input{
     font-size: 1.5rem;
     color:#294B52;
 
-    position: absolute;
-
-
-
 }
-.wrapper>header>.mid-header>.country{
-    width:200px;
+.wrapper>header>.mid-header>div:nth-child(1){
+    width:10vw;
     height:100%;
     border-right:3px solid;
+
     display:flex;
     align-items: center;
 }
-.wrapper>header>.mid-header>.date{
-    width:190px;
+.wrapper>header>.mid-header>div:nth-child(2){
+    width:10vw;
     height:100%;
     border-right:3px solid;
+
     display:flex;
     align-items:center;
 }
-.wrapper>header>.mid-header>.human{
-    width:190px;
+.wrapper>header>.mid-header>div:nth-child(3){
+    width:10vw;
     /* padding:0 40%; */
 }
 
 /* bottom-`header 숙소 구분메뉴 부분 */
-.wrapper>header>.bottom-header>nav{
+.wrapper>header>.bottom-header{
+    width:100%;
+}
+
+.wrapper>header>.bottom-header>nav>{
     width:100%;
     height:100px;
-    font-size: 3rem;
 
-    display:flex;
+}
+.mainmenu{
+    display: flex;
     justify-content: center;
     align-items: center;
-    
-    position: absolute;
-    bottom:10%;
+    font-size: 3rem;
 }
-.wrapper>header>.bottom-header>nav>div>a{
-    color:#294B52;
 
-}
-.wrapper>header>.bottom-header>nav>div{
-    padding:0px 100px;
-}
 
 
 /* main 페이지 */

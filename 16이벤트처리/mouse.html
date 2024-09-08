@@ -7,24 +7,24 @@
 </head>
     <style>
         #d1,#d2,#d3{
-            width:150px; height:150px; border:1px solid;
+            width:150px; height:150px; border:1px solid;        /* 박스 크기 ㅣ150px 지정 */
         }
         #d4{
-            width:350px; height:350px; border:1px solid;
+            width:350px; height:350px; border:1px solid;        /*  350px 크기 지정 */
         }
     </style>
 <body>
     
-    <div id="d1"></div>
+    <div id="d1"></div>                         
     <hr>
-    <a href="javascript:void(0)" id="d2">TEST</a>
+    <a href="javascript:void(0)" id="d2">TEST</a>           <!-- 페이지 이동하지 않는 링크 a태그  생성-->
     <hr>
-    <button onclick="Count()">TEST</button>
+    <button onclick="Count()">TEST</button>             <!-- TEST 라는 Count함수의 버튼 생성 여기서 Count()는 자바스크립트 함수 속성임 !-->
     <hr>
-    <form name="frm" action="test.jsp" onsubmit="return false">
+    <form name="frm" action="test.jsp" onsubmit="return false" >         
         <input type="text" name="userid" /> 
         <input type="text" name="password" />
-        <input class="submit-button" type="submit" value="버튼1" />
+        <input class="submit-button" type="submit" value="버튼1" />     
         <button class="submit-button" >버튼2</button>
         <a href="javascript:void(0)" class="submit-button" >버튼3</a>
     </form>
@@ -39,12 +39,12 @@
 
     <script>
         // 클릭이벤트
-        const d1Tg =  document.getElementById("d1");
-        let cnt=0;
-        d1Tg.addEventListener('click',(e)=>{
-            console.log("clicked..",e)
-            console.log("clicked..",e.target)
-            d1Tg.innerHTML=`<h3>CLICKED...${++cnt}</h3>`;
+        const d1Tg =  document.getElementById("d1");    //d1 id를 불러옴
+        let cnt=0;                              // 숫자를 증가시킬 변수 하나를 만들어둔다
+        d1Tg.addEventListener('click',(e)=>{        //클릭이 발생했을 때 생기는 이벤트
+            console.log("clicked..",e)              //클릭하면 e 이벤트 객체 자체를 출력하낟.
+            console.log("clicked..",e.target)       //클릭하면 e 의 요소를 출력한다. = html 요소 div 같은 
+            d1Tg.innerHTML=`<h3>CLICKED...${++cnt}</h3>`;       //html
         })
         
         const d2Tg =  document.getElementById("d2");

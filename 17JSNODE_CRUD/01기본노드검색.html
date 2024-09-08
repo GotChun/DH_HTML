@@ -34,14 +34,14 @@
         });
 
         // 
-        const li2El_2 = document.querySelector('#li2')
-        li2El_2.style.width='300px'
+        const li2El_2 = document.querySelector('#li2')      //id가 li2 인 요소 선택     , querySelector 쓰는거나 getElementByid 쓰는거나 똑같음 대신 id는 앞에 #을 안붙임!
+        li2El_2.style.width='300px'                         // width 300px 지정
 
         //
-        const itemEls = document.querySelectorAll('.item')
-        console.log(itemEls)
-        itemEls.forEach((item)=>{
-            console.log(item)
+        const itemEls = document.querySelectorAll('.item')      
+        console.log(itemEls)            //itemEls , class가 item인 배열 정보 자체를 출력  
+        itemEls.forEach((item)=>{                       
+            console.log(item)           
         })
 
         const aEls=document.getElementsByName('a')

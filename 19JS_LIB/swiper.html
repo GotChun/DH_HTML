@@ -13,9 +13,9 @@
 
 <style>
     .swiper{
-        height:500px;
+        height:500px;           //swiper 전체 크기 지정
     }
-    .swiper>.swiper-wrapper{
+    .swiper>.swiper-wrapper{        
         height:100%;
     }
     .swiper>.swiper-wrapper>.swiper-slide{
@@ -47,14 +47,14 @@
       
     </div>
     <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination"></div>       //swiper 가운데 아래 List 버튼
   
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>          //swiper 이전 버튼
+    <div class="swiper-button-next"></div>          //swiper 다음 버튼
   
     <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    <div class="swiper-scrollbar"></div>            
   </div>
             </section>
         </main>
@@ -77,8 +77,8 @@
             // 페이징처리
             pagination:{
                 el:'.swiper-pagination',
-                clickable:'true',
-                type: 'bullets',
+                clickable:'true',       
+                type: 'bullets',            //swiper 리스트 목록 모양 콩알 모양으로 지정
             },
             // next , prev
             navigation:{
@@ -86,7 +86,7 @@
                 prevEl:'.swiper-button-prev',
             },
             mousewheel : true,
-            effect : 'fade',//fade , scroll
+            effect : 'fade',//fade , scroll         //fade = 사라지듯이 장면 바뀜
 
         })//{}option object
             
