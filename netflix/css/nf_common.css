@@ -178,7 +178,7 @@ select{
   background-color: white;
 }
 .wrapper > main > section {
-  height: 500px;
+  height: 300px;
   display: flex;
   justify-content: space-between;
 }
