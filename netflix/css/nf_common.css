@@ -1,209 +1,247 @@
 @font-face {
-    font-family: "black-hans-sans";
-    src: url("/netflix/BlackHanSans-Regular.ttf");
+  font-family: "black-hans-sans";
+  src: url("/netflix/BlackHanSans-Regular.ttf");
 }
-body{
-    background-color: beige;
-    margin:0;
-    padding:0;
+body {
+  background-color: beige;
+  margin: 0;
+  padding: 0;
 }
-*{
-    text-decoration: none;
-    font-family: 'black-hans-sans',serif;
+* {
+  text-decoration: none;
+  font-family: "black-hans-sans", serif;
+  padding: 0;
 }
-.layout-1{
-
-    padding:0 10%;
+.layout-1 {
+  padding: 0 10%;
 }
-a{
-    color:black;
+a {
+  color: black;
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
-input{
-    height:50px;
-    line-height: 50px;
-    border:none;
-    margin-left:20px;
-    font-size: 1rem;
+input {
+    width:10vw;
+  height: 45px;
+  border: none;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+select{
+    width:5vw;
+    font-size: 1.5rem;
+    border: none;
 }
 
 /*  */
-.wrapper{
+.wrapper {
+    width:1440px;
 }
-.wrapper>header{
-    height:430px;
-    background-color: #CBCBAD;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.wrapper > header {
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cbcbad;
 }
-
 
 /* top-header  */
-.wrapper>header>.top-header{
-    height:100px;
-    display: flex;
-    justify-content: space-between;
-}
-.wrapper>header>.top-header>div:nth-child(2){
-    margin-right:50px;
+.wrapper > header > .top-header {
+  height: 100px;
 
+  display: flex;
+  justify-content: space-between;
 }
-.wrapper>header>.top-header>.logo{
-    margin-left:60px; 
+.wrapper > header > .top-header > div:nth-child(2) {
+  margin-right: 50px;
 }
-.wrapper>header>.top-header>.logo>a>img{
-    height:100%;
+.wrapper > header > .top-header > .logo {
+  margin-left: 60px;
 }
-.wrapper>header>.top-header>div:nth-child(2){
-    font-size:3rem;
-    margin-top:30px;
+.wrapper > header > .top-header > .logo > a > img {
+  height: 100%;
 }
-.wrapper>header>.top-header>div:nth-child(2)>a{
-    color:#294B52;
+.wrapper > header > .top-header > div:nth-child(2) {
+  font-size: 3rem;
+  margin-top: 30px;
 }
-.wrapper>header>.top-header>a>.sign{
-    width:100px;
-    height:37px;
-    background-color: #8EB988;
-    border-radius: 15px;
-    margin:20px;
-    display: flex;
-    align-items: center;   
-    justify-content: center;
+.wrapper > header > .top-header > div:nth-child(2) > a {
+  color: #294b52;
 }
-
-
+.wrapper > header > .top-header > a > .sign {
+  width: 100px;
+  height: 37px;
+  background-color: #8eb988;
+  border-radius: 15px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* mid-header 검색 창 부분 */
-.wrapper>header>.mid-header{
-    height:64px;
-    width:45vw;
+.wrapper > header > .mid-header {
+  height: 64px;
+  width: 40vw;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background-color: white;
-    border:1.5px solid;
-    border-radius: 20px;
-    font-size: 1.5rem;
-    color:#294B52;
-
+  background-color: white;
+  border: 1.5px solid;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  color: #294b52;
+  position: relative;
 }
-.wrapper>header>.mid-header>div:nth-child(1){
+.mid-header>input:first-child{
+    width:13vw;
+}
+.mid-header>div{
     width:10vw;
     height:100%;
-    border-right:3px solid;
+    /* margin-right:100px; */
 
-    display:flex;
-    align-items: center;
-}
-.wrapper>header>.mid-header>div:nth-child(2){
-    width:10vw;
-    height:100%;
-    border-right:3px solid;
-
-    display:flex;
-    align-items:center;
-}
-.wrapper>header>.mid-header>div:nth-child(3){
-    width:10vw;
-    /* padding:0 40%; */
-}
-
-/* bottom-`header 숙소 구분메뉴 부분 */
-.wrapper>header>.bottom-header{
-    width:100%;
-}
-
-.wrapper>header>.bottom-header>nav>{
-    width:100%;
-    height:100px;
-
-}
-.mainmenu{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-size: 3rem;
+}
+.mid-header>div>input{
+    font-size: 1rem;
+    margin: 0;
+}
+.mid-header>a{
+    padding-right:3%;
+    /* position: absolute; */
 }
 
+/* bottom-header 숙소 구분메뉴 부분 */
+.wrapper > header > .bottom-header {
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.wrapper > header > .bottom-header > nav {
+}
+.mainmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.mainmenu > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainmenu>li:nth-child(1){
+    padding-left:500px;
+}
+.mainmenu>li:nth-child(2){
+    padding-right:500px;
+}
+
+.mainmenu:hover>li .submenu{
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+}
+.mainmenu > li > a {
+  color: #294b52;
+}
+.submenu {
+    width:50vw;
+  font-size: 2rem;
+  background-color: #c5c2af;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  overflow: hidden;
+  z-index: 10;
+  visibility: hidden;
+  max-height: 0;
+  transition:.5s;
+
+}
 
 
 /* main 페이지 */
-.wrapper>main{
-    background-color: white;
+.wrapper > main {
+  background-color: white;
 }
-.wrapper>main>section{
-    width:80vw;
-    height:400px;
-    display:flex;
-    justify-content:space-between;
+.wrapper > main > section {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
 }
 /* 숙소 이미지 */
-.wrapper>main>section>.image{
-    width:10%;
-    height:100%;
-    padding:80px 100px;  /* 패딩땜에 구겨지면 마진을 주면 되나?*/
+.wrapper > main > section > .image {
+  width: 10%;
+  height: 100%;
+  padding: 80px 100px;
 }
-.wrapper>main>section>.image>a>img{
-    width:200px;
-    height:200px;
+.wrapper > main > section > .image > a > img {
+  width: 200px;
+  height: 200px;
 }
 
 /* 숙소 이름,정보 info_top */
-.wrapper>main>section>.info{
-    width:75vw;
-    height:100%;
-    padding-right:80px;
+.wrapper > main > section > .info {
+  width: 75vw;
+  height: 100%;
+  padding-right: 80px;
 }
-.wrapper>main>section>.info>.info_top{
-width:100%;
-height:150px;
-border-bottom:2px solid;
-display:flex;
-align-items: flex-end;
-justify-content: space-between;
+.wrapper > main > section > .info > .info_top {
+  width: 100%;
+  height: 150px;
+  border-bottom: 2px solid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
-.wrapper>main>section>.info>.info_top>.name{
-    font-size:2.5rem;
+.wrapper > main > section > .info > .info_top > .name {
+  font-size: 2.5rem;
 }
-.wrapper>main>section>.info>.info_top>.reserve ul{
-    font-size:1.3rem;
+.wrapper > main > section > .info > .info_top > .reserve ul {
+  font-size: 1.3rem;
 }
-.wrapper>main>section>.info>.info_top .reserve_button{
-    width:190px;
-    height:72px;
-    background-color: #D9D9D9;
+.wrapper > main > section > .info > .info_top .reserve_button {
+  width: 190px;
+  height: 72px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper > footer {
+    background-color: #d9d9d9;
+    height: 300px;
+  }
+.wrapper>footer>.footer{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
-
-/* info_bottom 숙소 주소,설명 */
-.wrapper>main>section>.info>.info_bottom
-
-
-
-
-.wrapper>footer{}
-.wrapper>footer>div>.policy{
+.policy{
     display: flex;
     justify-content: left;
     align-items: center;
 }
-.wrapper>footer>div>.policy li:first-child{
-    padding-left:0px;
-}
-.wrapper>footer>div>.policy li{
+.policy li{
     padding:10px 40px;
 }
-.wrapper>footer{
-    background-color: #D9D9D9;
-    width:100%;
-    height:300px;
+.footer>.logo{
 }
+.footer>.logo>a>img{
+    width:300px;
+    height: 300px;
+}
+
