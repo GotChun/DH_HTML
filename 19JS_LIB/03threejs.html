@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <script type="module">
+        import * as THREE from "three";
+
+        //  SCENE 생성
+        const scene = new THREE.Scene();
+        console.log(scene)
+
+        // CAMERA
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x808080)
+        document.body.appendChild(renderer.domElement);
+
+        // boxGeometry Add
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+        // box 경계추가
+        const edge = new THREE.Edigeometry(geometry)
+        const lineMetrial = new THREE<Three.LineBasicMetrerial({color:'red'})
+        const wireframe = new THREE.LineSegments(edge,lineMetrial);
+        cobe.add(wireframe) 
+
+        // Line add
+        // const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+
+        // 카메라 위치 설정
+        camera.position.z = 5;
+        // camera.position.x=5;
+        camera.position.y = 1;
+
+        // 렌더링에 항목 포함
+        renderer.render(scene, camera);
+
+        function animate() {
+
+            cube.rotation.x += 0.11;
+            cube.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+
+        }
+        renderer.setAnimationLoop(animate);
+    </script>
+</body>
+
+</html>
