@@ -57,7 +57,7 @@ select{
   }
 
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:650px){
   .info_top{
     display: none !important;
   }
@@ -213,13 +213,12 @@ select{
   background-color: white;
 }
 .wrapper > main > section {
-  height: 300px;
   display: flex;
   justify-content: space-between;
 }
 /* 숙소 이미지 */
 .wrapper > main > section > .image {
-  width: 10%;
+  width: 15%;
   height: 100%;
   padding: 80px 100px;
 }
@@ -257,6 +256,10 @@ select{
   align-items: center;
 }
 
+section:last-child{
+
+  position: relative;
+}
 
 footer {
   width:70%;
@@ -266,10 +269,12 @@ footer {
   font-size: 0.8em;  
 
   padding: 10px;
-  margin:100px auto 0;
+  /* margin-top: 100px; */
+  margin:100px 200px;
   
 
-
+  position: absolute;
+  
 }
 
 footer p {
